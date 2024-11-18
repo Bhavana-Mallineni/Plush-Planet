@@ -14,6 +14,7 @@ body {
     }
 
     .navbar-brand {
+        font-family: cursive, fantasy;
         font-size: 36px; /* Scale down the brand name */
     }
 
