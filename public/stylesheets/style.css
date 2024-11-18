@@ -14,12 +14,12 @@ body {
     }
 
     .navbar-brand {
-        font-family: cursive, fantasy;
-        font-size: 36px; /* Scale down the brand name */
+        font-family: "Edu AU VIC WA NT Pre", cursive;
+        font-size: 24px; /* Scale down the brand name */
     }
 
     .navbar-nav {
-        text-align: center; /* Center the menu items */
+        text-align: center;
     }
 
     .form-control {
