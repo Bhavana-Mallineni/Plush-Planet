@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
 const expressSession = require("express-session");
+const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
 
 const db = require("./config/mongoose-connection");
@@ -26,7 +27,11 @@ app.use(
 	expressSession({
 		resave: false,
 		saveUnitialized: false,
-		secret: process.env.EXPRESS_SESSION_SECRET
+		secret: process.env.EXPRESS_SESSION_SECRET,
+		store: MongoStore.create({
+			mongoUrl: process.env.MONGO_URI || "mongodb://localhost:27017/my-local-database"
+		}),
+		cookie: { secure: false } // Set to true if using HTTPS
 	})
 );
 app.use(flash());
