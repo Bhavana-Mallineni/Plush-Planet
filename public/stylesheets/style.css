@@ -119,3 +119,32 @@ footer {
 .payment-option input {
     margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+    .responsive-img {
+        width: 100%; /* Ensures the image fits its container */
+        height: auto; /* Maintains aspect ratio */
+        object-fit: cover; /* Keeps the image visually appealing */
+    }
+
+    .product {
+        flex-direction: column; /* Adjusts the layout to stack items vertically */
+        gap: 20px;
+    }
+
+    .product-img {
+        width: 100%; /* Ensures the image container adjusts to smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-details {
+        text-align: center; /* Centers the text for better appearance */
+    }
+}

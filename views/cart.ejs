@@ -89,8 +89,8 @@
                                 <% if(cartItem.product.image.buffer) { %>
                                 <img
                                     src="data:image/jpeg;base64,<%=cartItem.product.image.toString('base64')%>"
-                                    alt="Product Image" class="card-img-top"
-                                    style="height: 300px; width: 300px; object-fit: cover;">
+                                    alt="Product Image" class="card-img-top responsive-img"
+                                    style="height: 300px; width: 100%; object-fit: cover;">
                                 <% } %>
                             </div>
 
