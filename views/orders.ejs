@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Plush Planet</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </head>
+
+    <body style="background-color: #f9f5f1;">
+
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-expand-lg mb-3"
+            style="background-color: #f0a9a9;">
+            <div class="container-fluid mx-3">
+                <a class="navbar-brand" href="#"
+                    style="font-family: 'Brush Script MT'; font-size: 50px; color: #5d4545;">Plush
+                    Planet</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mb-2"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/shop">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/users/cart">Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/users/logout">Logout</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success"
+                            type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Container -->
+        <div class="container my-5">
+            <!-- Main Content -->
+            <div class="container mt-5">
+                <h2>Your Orders</h2>
+                <% if (orders.length > 0) { %>
+                <% orders.forEach(order => { %>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Order ID: <%= order.orderId
+                            %></h5>
+                        <p><strong>Total Amount:</strong> ₹<%= order.totalAmount
+                            %></p>
+                        <p><strong>Payment Method:</strong> <%=
+                            order.paymentMethod %></p>
+                        <p><strong>Address:</strong> <%= order.address %></p>
+                        <h6>Items:</h6>
+                        <ul class="list-group">
+                            <% order.products.forEach(item => { %>
+                            <li
+                                class="list-group-item d-flex align-items-center">
+                                <img
+                                    src="data:image/jpeg;base64,<%=item.product.image.toString('base64')%>"
+                                    alt="<%= item.product.name %>"
+                                    class="img-thumbnail me-3"
+                                    style="width: 80px; height: 80px;">
+                                <div>
+                                    <h6 class="mb-1"><%= item.product.name
+                                        %></h6>
+                                    <p class="mb-1">
+                                        <strong>Quantity:</strong> <%=
+                                        item.quantity %><br>
+                                        <strong>Price:</strong> ₹<%=
+                                        item.product.discountPrice %>
+                                    </p>
+                                </div>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <% }); %>
+                <% } else { %>
+                <p>You have no orders yet.</p>
+                <% } %>
+            </div>
+
+        </div>
+
+        <footer style="background-color: #fabbbbcb; color: black;">
+            <div class="footer-container p-5">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>We are a leading online store offering the best products
+                        for your needs. Our goal is to provide exceptional
+                        quality and service.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul style="color: black">
+                        <li><a href="#" style="color: black">Home</a></li>
+                        <li><a href="#" style="color: black">Shop</a></li>
+                        <li><a href="#" style="color: black">Contact</a></li>
+                        <li><a href="#" style="color: black">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons"
+                        style="font-size: 1.5rem;">
+                        <i class="fa-brands fa-square-facebook me-3">
+                        </i>
+                        <i class="fa-brands fa-square-x-twitter me-3"></i>
+                        <i class="fa-brands fa-square-instagram me-3"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="background-color:#9b5050d2;">
+                <p>&copy; 2024 Plush Planet. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
