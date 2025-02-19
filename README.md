@@ -8,7 +8,7 @@
 
 Plush Planet is a **full-stack e-commerce platform** built using **Node.js, Express.js, MongoDB, and EJS**. It allows users to browse, purchase soft toys, and manage orders efficiently.
 
-### **🔗 Live Preview:** [www.plushplanet.com](https://plush-planet.onrender.com/) *(Update if deployed)*
+### **🔗 Live Preview:** [Link to Demo](https://plush-planet.onrender.com/) *(Update if deployed)*
 
 ---
 
@@ -36,10 +36,10 @@ Plush Planet is a **full-stack e-commerce platform** built using **Node.js, Expr
 
 ## **📸 Demo Screenshot**
 **Login Page**
-![Plush Planet Screenshot](./public/image/pp_login.png) *(Replace with actual screenshot)*
+![Plush Planet Screenshot](./public/images/pp_login.png) *(Replace with actual screenshot)*
 
 **Home Page**
-![Plush Planet Screenshot](./public/image/pp_home.png) *(Replace with actual screenshot)*
+![Plush Planet Screenshot](./public/images/pp_home.png) *(Replace with actual screenshot)*
 
 ---
 
