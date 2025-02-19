@@ -1,9 +1,3 @@
-<p align="center" width="100%">
-    <img height="100" src="https://github.com/Bhavana-Mallineni/your-logo.svg">
-</p>
-
----
-
 # **Plush Planet – E-commerce Platform 🛍️**
 
 Plush Planet is a **full-stack e-commerce platform** built using **Node.js, Express.js, MongoDB, and EJS**. It allows users to browse, purchase soft toys, and manage orders efficiently.
